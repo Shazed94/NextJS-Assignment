@@ -1,0 +1,41 @@
+1.<!--...--> =  Describe a comment text in the source code
+
+2.<a> =  Defines a hyperlink, which is used to link from one page to another.
+
+3.<address> =  Defines the contact information for the author/owner of a document or an article.
+
+4.<article> = this tag defines an independent, self-contained content.
+
+5.<audio> = <audio> tag is used to embed sound content in a document, such as music or other audio streams.
+
+6.<b> = Specifies bold text without any extra importance.
+
+7.<blockquote> =  Specifies a section that is quoted from another source.
+
+8.<body> = <body> tag defines the document's body.
+
+9.<br /> =<br /> tag inserts a single line break.
+
+10.<button> = Defines a clickable button.
+
+11.<del> = Defines text that has been deleted from a document
+
+12.<div> = Defines a division or a section in an HTML document.
+
+13.<header> =  <header> tag represents a container for introductory content or a set of navigational links.
+
+14.<h1> to <h6> = <h1> to <h6> tags are used to define HTML headings.
+
+15.<html> = This tag represents the root of an HTML document.
+
+16.<img> = This tag used to embed an image in an HTML page.
+
+17.<link> = This tag defines the relationship between the current document and an external resource.
+
+18.<menu> =  Defines a list/menu of commands.
+
+19.<p> = Defines a paragraph.
+
+20.<select> = <select> element is used to create a drop-down list.
+
+
