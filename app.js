@@ -17,7 +17,6 @@ const clearCartBtn = document.getElementById('clear-cart-btn');
 const discountAmountTotal = document.getElementById('discount-amount');
 const subTotal = document.getElementById('sub-total-amount');
 const discountInput = document.getElementById("discount")
-let emptyCart = document.getElementById('empty-cart');
 
 let cartItems = [];
 let quantity = 1; // Default quantity is 1
@@ -31,14 +30,14 @@ products.forEach(product => {
             <td class="py-2 px-4 border-b">${product.name}</td>
             <td class="py-2 px-4 border-b">$${product.price.toFixed(2)}</td>
             <td class="py-2 px-4 border-b">
-                <button id="add-to-cart" onclick="addToCart(${product.id})" class="add-to-cart-btn bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded" >Add to
+                <button id="add-to-cart" onclick="addToCart(${product.id})" class="add-to-cart-btn bg-blue-500 hover:bg-blue-600 text-white px-2 lg:px-4 py-2 rounded" >Add to
                 Cart</button>
             </td>
           </tr>
         `
 });
 
-
+displayCartItems();
 function addToCart(id) {
     const selectedProduct = products.find(product => product.id === id);
     discountBtn.classList.remove("hidden")
@@ -60,13 +59,12 @@ function addProductToCart(product, quantity) {
     } else {
         cartItems.push({ id: product.id, name: product.name, price: product.price, quantity });
     }
-
-
     displayCartItems()
 }
 
 function displayCartItems() {
     cartItemsContainer.innerHTML = '';
+
     cartItems.forEach(item => {
         const row = document.createElement('tr');
         const removeItem = document.createElement('button');
@@ -105,6 +103,9 @@ function displayCartItems() {
         calculateTotalAmount()
         calculateDiscount()
     });
+    if (cartItems.length == 0) {
+        cartItemsContainer.innerHTML = `<td colspan="7" class="text-center font-semibold pt-5">Cart is Empty</td>`
+    }
 }
 
 function increaseQuantity(id) {
@@ -171,12 +172,6 @@ function clearCart() {
     discountInput.classList.add("hidden")
     discountInput.classList.remove("block")
     clearCartBtn.classList.add("hidden")
-
-    const p = document.createElement('p');
-    p.textContent = "Cart is empty"
-    cartItemsContainer.appendChild(p);
-    console.log(emptyCart.appendChild(p))
-
     displayCartItems();
 }
 

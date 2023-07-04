@@ -10,10 +10,9 @@
 </head>
 
 <body>
-    <div class="container px-16 mx-auto">
+    <div class="container px-4 lg:px-14 mx-auto">
         <div class="flex flex-wrap">
-            <div class="w-2/3  px-5 py-7 shadow-lg bg-slate-50">
-
+            <div class="w-full lg:w-2/3 mb-4 px-5 py-7 shadow-lg bg-slate-50">
                 <div class="overflow-x-auto" id="productList">
                     <table class="min-w-full border-collapse" id="table">
                         <thead>
@@ -28,11 +27,9 @@
                         </tbody>
                     </table>
                 </div>
-
-
             </div>
-            <div class="w-1/3  bg-gray-100">
-                <h1 class="text-center font-bold text-2xl">Cart</h1>
+            <div class="w-full lg:w-1/3   bg-gray-100">
+                <h1 class="text-center font-bold text-2xl mt-5 lg:mt-[28px]">Shopping Cart</h1>
 
                 <div class="mt-6">
                     <table class="min-w-full border-collapse">
@@ -47,10 +44,6 @@
                         </thead>
                         <tbody id="cart-items">
                             <!-- Cart items will be dynamically added here -->
-
-                            <tr id="empty-cart">
-                               
-                            </tr>
                         </tbody>
                         <tfoot>
                             <tr class="">
@@ -63,7 +56,7 @@
                             <tr>
                                 <td colspan="1" class="">
                                     <input type="text" id="discount" 
-                                        class="hidden rounded shadow border-slate-200 placeholder-slate-400 focus-visible:outline-none px-2 py-1 my-2 ml-2 w-16">
+                                        class="hidden rounded shadow border border-blue-500 placeholder-slate-400 focus-visible:outline-none px-2 py-1 my-2 ml-2 w-16">
                                 </td>
                                 <td colspan="4" class="">
                                     <button id="apply_discount"
@@ -75,7 +68,7 @@
 
                             </tr>
                             <tr class="border-t-slate-500 border-t-2">
-                                <td colspan="6" class="text-right font-semibold">Sub total:</td>
+                                <td colspan="6" class="text-right font-semibold">Subtotal Price:</td>
                                 <td id="sub-total-amount" class="font-semibold text-center mb-6"></td>
                             </tr>
 
