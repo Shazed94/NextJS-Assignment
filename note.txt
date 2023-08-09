@@ -1,0 +1,13 @@
+.gitignore: This file tells Git which files to ignore when tracking changes to the project.
+
+next.config.js: This file contains configuration options for your Next.js project.
+
+package.json: This file contains the dependencies for your project.
+
+public: This is where you can put static assets like images, fonts, and other files that will be served publicly.
+
+app: This directory is for the project's pages. It contains the root layout for the project as layout.js , the default page for the app as page.js, for global CSS and component-specific CSS or styling global.css and page.module.css files are used. 
+
+favicon.ico: The icon that appears in the browser tab.
+
+node_modules: Just like in the manually created project, this directory holds the project's dependencies.
