@@ -10,4 +10,4 @@ app: This directory is for the project's pages. It contains the root layout for 
 
 favicon.ico: The icon that appears in the browser tab.
 
-node_modules: Just like in the manually created project, this directory holds the project's dependencies.
+node_modules: This directory holds the project's dependencies.
