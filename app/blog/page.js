@@ -23,7 +23,7 @@ const Blog = () => {
             <div className='container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4'>
                 {blogData?.map((blog) => (
                     <div className='bg-slate-50 px-6 p-3 mx-4 lg:mx-0'>
-                        <Link href={`blog/${blog.id}`}>
+                        <Link href={`post/${blog.id}`}>
                             <h3 className='font-medium mb-5'>{blog.title}</h3>
                         </Link>
                         <h3 className=' mb-5'>{blog.body}</h3>
