@@ -5,7 +5,9 @@ const Contact = () => {
     <div>
       <div class="relative overflow-hidden">
 
-        <div class="hidden md:block md:absolute md:top-0 md:right-1/2 md:left-0 h-full bg-[url('https://images.unsplash.com/photo-1606868306217-dbf5046868d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1981&q=80')] bg-no-repeat bg-center bg-cover"></div>
+        <div class="hidden md:block md:absolute md:top-0 md:right-1/2 md:left-0 h-full ">
+          <img src="/contact-form-bg.jpg" alt="" className='h-full w-full object-cover'/>
+        </div>
 
         <div class="mx-auto max-w-screen-md py-12 px-4 sm:px-6 md:max-w-screen-xl md:py-20 lg:py-28 md:px-8">
           <div class="md:pr-8 md:w-1/2 xl:pr-0 xl:w-5/12 ml-auto">

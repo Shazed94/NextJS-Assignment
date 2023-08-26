@@ -7,6 +7,9 @@ export default async function Home() {
   const postCategories = await getPostCategories()
   const newestPosts = await getNewestPost()
   return (<>
+    <div className="py-20 flex justify-center items-center uppecase bg-cyan-900 text-white text-6xl mb-12">
+     A Simple Blog Project
+    </div>
     <h2 className="text-center text-4xl font-semibold mt-12 mb-6">Blog Categories</h2>
     <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-10 pt-5 pb-12 ">
       {postCategories.map((category) => (
@@ -30,5 +33,6 @@ export default async function Home() {
         ))}
       </div>
     </div>
+
   </>)
 }
