@@ -1,22 +1,9 @@
-'use client';
-
 import getPostDetails from '@/app/api/getPostDetails'
-import React, { useEffect, useState } from 'react'
 
-const SinglePost = ({ params }) => {
+const SinglePost = async ({ params }) => {
     const id = params.id
-    const [singlePost, setSinglePost] = useState()
-
-    useEffect(() => {
-        (async () => {
-            const data = await getPostDetails(id)
-            setSinglePost(data.postDetails)
-        }
-
-        )()
-    }, [id])
-
-
+    const data = await getPostDetails(id)
+    const singlePost = await data.postDetails
     return (
         <div>
             {singlePost?.title ?
