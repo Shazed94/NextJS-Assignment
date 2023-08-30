@@ -6,7 +6,7 @@ export async function GET(req, res) {
             status: 200,
             headers: {
                 'token': 'XYZ-123',
-                'Set-Cookie': "theme = dark"
+                'Set-Cookie': "theme = dark ; path= api/cookies",
             }
         })
 }
