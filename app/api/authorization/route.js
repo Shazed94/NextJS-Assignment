@@ -5,11 +5,11 @@ export async function GET(req, res) {
     const headerlist = headers()
     const token = headerlist.get('token')
 
-    return NextResponse.json({ msg: token },
-        {
+    return NextResponse.next({
+        request: {
             headers: {
                 'Authorization': `Bearer ${token}`,
             }
-        }
-    )
+        },
+    })
 }
