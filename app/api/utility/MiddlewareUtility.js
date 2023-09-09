@@ -1,5 +1,5 @@
-import {VerifyToken} from "@/app/utility/JWTHelper";
 import { NextResponse } from "next/server";
+import { VerifyToken } from "./JWTHelper";
 
 export async function CheckCookieAuth(req) {
 

@@ -12,7 +12,7 @@ export async function GET(req, res) {
     let token = await new SignJWT(payload)
         .setProtectedHeader({ alg: "HS256" })
         .setIssuedAt()
-        .setIssuer('https://module-14-assignment-eta.vercel.app')
+        .setIssuer('https://localhost:3000')
         .setExpirationTime('2h')
         .sign(key)
 

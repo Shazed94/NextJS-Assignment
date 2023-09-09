@@ -24,9 +24,14 @@ export default function Home() {
     }))
   }
 
+  function showToast(){
+    toast.success("A token is being sent to your email. Please wait...", {
+      autoClose: 2500,
+      theme: "colored",
+    })
+  }
 
-
-  const sendEmail = async (email, message) => {
+  const sendEmail = async (email) => {
 
     try {
       // Transporter 
@@ -55,7 +60,7 @@ export default function Home() {
       return response;
 
     } catch (e) {
-
+console.log(e)
     }
 
   }
@@ -79,6 +84,7 @@ export default function Home() {
 
     } else {
       setLoading(true)
+      
       await fetch("/api/email?email=" + formValue.email)
       await sendEmail(formValue.email);
       setLoading(false)
@@ -90,8 +96,8 @@ export default function Home() {
           password: formValue.password,
           callbackUrl
         })
-     
-     
+
+
       if (!response?.error) {
         router.replace(callbackUrl)
       }
@@ -115,9 +121,16 @@ export default function Home() {
                 <Form.Control required type="password" value={formValue.password} onChange={(e) => inputChange('password', e.target.value)} placeholder="Password" />
               </Form.Group>
 
-              <Button variant="primary" type="submit">
-                {loading ? "Loading..." :"Submit"}
-              </Button>
+              {loading ?<>
+              {showToast()}
+                <Button variant="primary" type="submit">
+                  Redirecting...
+                </Button>
+              </>
+                : <Button variant="primary" type="submit">
+                  Submit
+                </Button>}
+
             </Form>
           </div>
         </div>
