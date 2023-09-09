@@ -1,5 +1,7 @@
 import NextAuth from "next-auth/next"
 import CredentialsProvider from "next-auth/providers/credentials"
+import { NextResponse } from "next/server";
+import { TokenCookie } from "../../utility/TokenCookie";
 export const authOptions = {
     pages: {
         signIn: "/",
@@ -16,8 +18,13 @@ export const authOptions = {
                 let password = credentials.password
                 // DB Email Password check
                 if (email === "ashraf.shazed@gmail.com" && password === "123456") {
+                    let Cookie = await TokenCookie(email);
                     const user = { id: 1, name: "Shazed Rafi", email: "ashraf.shazed@gmail.com" }
-                    return user;
+                    return NextResponse.json(
+                        { status: true, user: user },
+                        { status: 200, headers: Cookie }
+                    ), user
+
                 } else {
                     return null;
                 }
