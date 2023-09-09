@@ -16,6 +16,7 @@ export default function Home() {
     email: "ashraf.shazed@gmail.com",
     password: "123456"
   })
+  const [loading, setLoading] = useState(false)
 
   const inputChange = (name, value) => {
     setFormValue(formValue => ({
@@ -26,17 +27,6 @@ export default function Home() {
 
 
   const sendEmail = async (email, message) => {
-
-    // const key = new TextEncoder().encode(process.env.JWT_SECRET);
-    // const payload = { email: formValue.email, user_id: "Abc123" }
-
-    // let token = await new SignJWT(payload)
-    //   .setProtectedHeader({ alg: "HS256" })
-    //   .setIssuedAt()
-    //   .setIssuer('https://localhost:3000')
-    //   .setExpirationTime('2h')
-    //   .sign(key)
-
 
     try {
       // Transporter 
@@ -54,7 +44,7 @@ export default function Home() {
       // Prepare Email 
       let myEmail = {
         from: "info@teamrabbil.com",
-        to: formValue.email,
+        to: email,
         subject: "Test Email From Next JS Application",
         text: "Mail with token",
         html: `<b>Token</b> : ${token}`,
@@ -62,19 +52,15 @@ export default function Home() {
       }
 
       const response = await Transporter.sendMail(myEmail);
-      console.log("inside email", response)
       return response;
 
     } catch (e) {
 
     }
 
-
   }
 
   const handleSubmit = async (e) => {
-
-
 
     e.preventDefault();
     if (formValue.email !== "ashraf.shazed@gmail.com") {
@@ -92,6 +78,10 @@ export default function Home() {
       });
 
     } else {
+      setLoading(true)
+      await fetch("/api/email?email=" + formValue.email)
+      await sendEmail(formValue.email);
+      setLoading(false)
       const callbackUrl = "/dashboard"
       const response = await signIn("credentials",
         {
@@ -100,14 +90,12 @@ export default function Home() {
           password: formValue.password,
           callbackUrl
         })
-      const emailRequest = await fetch("/api/email?email=" + formValue.email)
-      await sendEmail(formValue.email);
+     
+     
       if (!response?.error) {
         router.replace(callbackUrl)
       }
-
     }
-
 
   }
   return (
@@ -128,7 +116,7 @@ export default function Home() {
               </Form.Group>
 
               <Button variant="primary" type="submit">
-                Submit
+                {loading ? "Loading..." :"Submit"}
               </Button>
             </Form>
           </div>

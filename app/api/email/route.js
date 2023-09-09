@@ -6,15 +6,15 @@ export async function GET(req, res) {
     const { searchParams } = new URL(req.url)
     let ToEmail = searchParams.get('email')
 
-    // const key = new TextEncoder().encode(process.env.JWT_SECRET);
-    // const payload = { email: ToEmail, user_id: "Abc123" }
+    const key = new TextEncoder().encode(process.env.JWT_SECRET);
+    const payload = { email: ToEmail, user_id: "Abc123" }
 
-    // let token = await new SignJWT(payload)
-    //     .setProtectedHeader({ alg: "HS256" })
-    //     .setIssuedAt()
-    //     .setIssuer('https://localhost:3000')
-    //     .setExpirationTime('2h')
-    //     .sign(key)
+    let token = await new SignJWT(payload)
+        .setProtectedHeader({ alg: "HS256" })
+        .setIssuedAt()
+        .setIssuer('https://module-14-assignment-eta.vercel.app')
+        .setExpirationTime('2h')
+        .sign(key)
 
 
     try {
@@ -48,8 +48,5 @@ export async function GET(req, res) {
     catch (e) {
         return NextResponse.json({ msg: "Fail" })
     }
-
-
-    // return NextResponse.json({ token: token })
 
 }
