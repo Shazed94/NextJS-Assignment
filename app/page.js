@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Link from "next/link";
 
@@ -68,7 +69,7 @@ export default function Home() {
           <h3 className="mb-4 text-f24 font-semibold ">Grow Your Business</h3>
           <p className="mb-10 text-f18 lg:max-w-[300px]">We help identify the best ways to improve your business</p>
           <Link href="/" className="flex items-center"> <span className="me-2"> Learn More</span>  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 18 17" fill="none">
-            <path d="M10 1.83331L17 8.83331L10 15.8333M1 8.83331H17H1Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10 1.83331L17 8.83331L10 15.8333M1 8.83331H17H1Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg> </Link>
         </div>
         <div>
@@ -78,7 +79,7 @@ export default function Home() {
           <h3 className="mb-4 text-f24 font-semibold">Grow Your Business</h3>
           <p className="mb-10 text-f18 lg:max-w-[300px]">We help identify the best ways to improve your business</p>
           <Link href="/" className="flex items-center"> <span className="me-2"> Learn More</span>  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 18 17" fill="none">
-            <path d="M10 1.83331L17 8.83331L10 15.8333M1 8.83331H17H1Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10 1.83331L17 8.83331L10 15.8333M1 8.83331H17H1Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg> </Link>
         </div>
         <div>
@@ -88,7 +89,7 @@ export default function Home() {
           <h3 className="mb-4 text-f24 font-semibold">Grow Your Business</h3>
           <p className="mb-10 text-f18 lg:max-w-[300px]">We help identify the best ways to improve your business</p>
           <Link href="/" className="flex items-center"> <span className="me-2"> Learn More</span>  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 18 17" fill="none">
-            <path d="M10 1.83331L17 8.83331L10 15.8333M1 8.83331H17H1Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M10 1.83331L17 8.83331L10 15.8333M1 8.83331H17H1Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg> </Link>
         </div>
 
@@ -129,6 +130,6 @@ export default function Home() {
     </section>
 
 
-
+    <Footer />
   </>)
 }
