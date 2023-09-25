@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+@layer base {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .btn_green {
+    color: #20B15A;
+  }
+}
+
+
+/* ! ========================= header ==============================  */
+.nav_brand {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nav_brand span {
+  color: #F55F1D;
+}
+
+.nav a {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+/* ? ====================   HOMEPAGE =================================== */
+
+/* ! ========================= Hero ==============================  */
+.hero {
+  background: linear-gradient(180deg, #D7F5DC 0%, #D7F5DC 100%);
+}
+
+.hero .left_side {
+  max-width: 600px;
+}
+
+.hero_slider {
+  background: #fff;
+}
+
+/* ! ========================= Work List ==============================  */
+.work_list .icon_wrapper {
+  
+}
