@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 @layer base {
 
@@ -19,8 +19,8 @@
 }
 
 @layer components {
-  .btn_green {
-    color: #20B15A;
+  .plus_jakarta_sans {
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 }
 
@@ -59,6 +59,4 @@
 }
 
 /* ! ========================= Work List ==============================  */
-.work_list .icon_wrapper {
-  
-}
+.work_list .icon_wrapper {}

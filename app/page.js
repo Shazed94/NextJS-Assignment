@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Subscribe from "@/components/Subscribe";
 import Link from "next/link";
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
           <h1 className="text-f50 font-extrabold mb-5">Increase Your Customers Loyalty and Satisfaction</h1>
           <p className="text-f20 font-medium mb-12">We help businesses like yours earn more customers, standout from competitors,  make more money</p>
 
-          <button className="text-f20 bg-[#20B15A] border-[1px] border-[#20B15A] text-white rounded-[10px] py-5 px-[30px]">Get Started</button>
+          <button className="text-f20 bg-[#20B15A] border-[1px] border-[#20B15A] text-white rounded-[16px] py-5 px-[30px]">Get Started</button>
         </div>
         <div className="right_side justify-self-end">
           <div className="flex mb-5">
@@ -128,6 +129,51 @@ export default function Home() {
         </div>
       </div>
     </section>
+
+    <section className="featured_post bg-light-green-bg">
+      <div className="container mx-auto py-14">
+        <div className="mb-10">
+          <h5 className="text-light-green-text uppercase text-f20 font-medium mb-5">Featured Project</h5>
+          <h2 className="text-f30 font-semibold lg:max-w-[480px]">We provide the Perfect Solution to your business growth</h2>
+        </div>
+
+        <div className="grid grid-cols-2 gap-10">
+
+          <div className="col-span-1">
+            <img src="/assets/homepage/project_banner_1.png" alt="" className="rounded-[20px] mb-3" />
+            <h6 className="text-f14 text-opacity-80 mb-1">App Design - June 20, 2022</h6>
+            <h5 className="text-f24 font-bold text-purple">App Redesign</h5>
+          </div>
+
+
+          <div className="col-span-1">
+
+            <div className="grid grid-cols-2 gap-3">
+              <div className="col-span-1">
+                <img src="/assets/homepage/project_banner_2.png" alt="" className="rounded-[20px] h-[188px] w-[287px] mb-3" />
+                <h6 className="text-f14 text-opacity-80 mb-1">App Design - June 20, 2022</h6>
+                <h5 className="text-f24 font-bold text-purple">App Redesign</h5>
+              </div>
+              <div className="col-span-1">  <img src="/assets/homepage/project_banner_2.png" alt="" className="rounded-[20px] h-[188px] w-[287px] mb-3" />
+                <h6 className="text-f14 text-opacity-80 mb-1">App Design - June 20, 2022</h6>
+                <h5 className="text-f24 font-bold text-purple">App Redesign</h5>
+              </div>
+              <div className="col-span-1">  <img src="/assets/homepage/project_banner_2.png" alt="" className="rounded-[20px] h-[188px] w-[287px] mb-3" />
+                <h6 className="text-f14 text-opacity-80 mb-1">App Design - June 20, 2022</h6>
+                <h5 className="text-f24 font-bold text-purple">App Redesign</h5>
+              </div>
+              <div className="col-span-1">  <img src="/assets/homepage/project_banner_2.png" alt="" className="rounded-[20px] h-[188px] w-[287px] mb-3" />
+                <h6 className="text-f14 text-opacity-80 mb-1">App Design - June 20, 2022</h6>
+                <h5 className="text-f24 font-bold text-purple">App Redesign</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <Subscribe />
 
 
     <Footer />
