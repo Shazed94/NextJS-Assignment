@@ -18,7 +18,8 @@ const Header = ({ background }) => {
           <Link href="/" className="">Home</Link>
           <Link href="/team" className="">Team</Link>
           <Link href="/service" className="">Service</Link>
-          <Link href="/testimonial" className="">Testimonial</Link>
+          <Link href="/projects" className="">Projects</Link>
+          <Link href="/testimonials" className="">Testimonials</Link>
           <Link href="/login">
             <button className="login bg-transparent border-[1px] border-[#20B15A] rounded-[10px] py-2 px-7">
               Login
