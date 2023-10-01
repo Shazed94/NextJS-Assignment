@@ -28,7 +28,7 @@ export default async function page() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {testimonialList.map((testomonial) => (
-                        <div key={testimonialList.id} className="relative rounded-2xl bg-white text-center shadow-md p-6">
+                        <div key={testimonialList.id} className="relative rounded-[20px] bg-white text-center shadow-[0px_4px_30px_0px_rgba(0,0,0,0.09)] p-6">
                             <div className="w-[100px] h-[100px] mx-auto rounded-[20px] overflow-hidden mb-5">
                                 <img
                                     src={testomonial.image}
