@@ -13,6 +13,7 @@ module.exports = {
       f18: "18px",
       f20: "20px",
       f24: "24px",
+      f26: "26px",
       f30: "30px",
       f40: "40px",
       f50: "50px",

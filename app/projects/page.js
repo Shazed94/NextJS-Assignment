@@ -30,7 +30,7 @@ export default async function page() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     {allProjects.map((project) => (
-                        <div key={project.is} className="relative rounded-2xl bg-white shadow-md p-6">
+                        <div key={project.is} className="relative rounded-2xl bg-white shadow-[0px_4px_30px_0px_rgba(0,0,0,0.09)] p-6">
                             <a href={project.live} target='_blank' className='cursor-pointer'>
                                 <div className='rounded-[10px] overflow-hidden'>
                                     <img
@@ -41,7 +41,7 @@ export default async function page() {
                                 </div>
 
                                 <div className="p-6">
-                                    <h4 className="text-center text-f30 font-semibold text-light-gray/900">
+                                    <h4 className="text-center text-f26 font-semibold text-light-gray/900">
                                         {project.title}
                                     </h4>
                                 </div>

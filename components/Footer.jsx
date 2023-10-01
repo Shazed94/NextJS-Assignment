@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BiLogoFacebook } from "react-icons/bi";
+import { BiLogoFacebook, BiLogoInstagramAlt, BiLogoLinkedin, BiLogoTwitter } from "react-icons/bi";
 
 export default function Footer() {
   return (
@@ -17,13 +17,13 @@ export default function Footer() {
                 <BiLogoFacebook size={25} />
               </div>
               <div className="bg-light-green-text p-3 rounded-full me-2">
-                <BiLogoFacebook size={25} />
+                <BiLogoTwitter size={25} />
               </div>
               <div className="bg-light-green-text p-3 rounded-full me-2">
-                <BiLogoFacebook size={25} />
+                <BiLogoLinkedin size={25} />
               </div>
               <div className="bg-light-green-text p-3 rounded-full me-2">
-                <BiLogoFacebook size={25} />
+                <BiLogoInstagramAlt size={25} />
               </div>
             </div>
           </div>

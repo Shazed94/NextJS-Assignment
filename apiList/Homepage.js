@@ -33,8 +33,15 @@ async function getStats() {
     }
     return res.json();
 }
+async function getSiteMeta() {
+    const res = await fetch('https://agency.teamrabbil.com/api/SiteMeta/home');
+    if (!res.ok) {
+        throw new Error("Stat list calling fail")
+    }
+    return res.json();
+}
 
 
 
 
-export { getHeroInfo, getBrandList, getWorkList, getFeaturedProjects, getStats }
+export { getHeroInfo, getBrandList, getWorkList, getFeaturedProjects, getStats,getSiteMeta }

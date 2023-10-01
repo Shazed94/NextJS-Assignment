@@ -1,4 +1,4 @@
-import { getBrandList, getFeaturedProjects, getHeroInfo, getStats, getWorkList } from "@/apiList/Homepage";
+import { getBrandList, getFeaturedProjects, getHeroInfo, getSiteMeta, getStats, getWorkList } from "@/apiList/Homepage";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Subscribe from "@/components/Subscribe";
@@ -12,11 +12,12 @@ export default async function Home() {
   const featuredProjects = await getFeaturedProjects()
   const statlist = await getStats()
 
+
   return (<>
     <Header background={`bg-[#D7F5DC]`} />
     <section className="hero py-14">
       <div className="container mx-auto grid grid-cols-2 gap-5">
-        <div className="left_side pe-7">
+        <div className="left_side pe-7 self-center">
           <h1 className="text-f50 font-extrabold mb-5">{heroinfo.title}</h1>
           <p className="text-f20 font-medium mb-12">{heroinfo.description}</p>
 
@@ -127,7 +128,7 @@ export default async function Home() {
 
           {featuredProjects.slice(0, 1).map((project) => (
             <div key={project.id} className="col-span-1">
-              <a href={project.link}>
+              <a target="_blank" href={project.live}>
                 <img key={project.id} src={project.image} alt="" className="rounded-[20px] mb-3" />
                 <h6 className="text-f14 text-opacity-80 mb-1">{project.remark} - June 20, 2022</h6>
                 <h5 className="text-f24 font-bold text-purple">{project.title}</h5>
@@ -143,7 +144,7 @@ export default async function Home() {
               {featuredProjects.slice(1).map((project) => (
 
                 <div key={project.id} className="col-span-1">
-                  <a href={project.link}>
+                  <a target="_blank" href={project.live}>
                     <img key={project.id} src={project.image} alt="" className="rounded-[20px] mb-3" />
                     <h6 className="text-f14 text-opacity-80 mb-1">{project.remark} - June 20, 2022</h6>
                     <h5 className="text-f24 font-bold text-purple">{project.title}</h5>

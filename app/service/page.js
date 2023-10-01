@@ -28,7 +28,7 @@ export default async function page() {
                 </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {allServices.map((service) => (
-                        <div key={service.id} className="relative rounded-2xl bg-white shadow-md p-6">
+                        <div key={service.id} className="relative rounded-2xl bg-white shadow-[0px_4px_30px_0px_rgba(0,0,0,0.09)] p-6">
                             <h2 className="text-[26px] font-semibold mb-3">{service.title}</h2>
                             <h5 className="text-f16 text-9d9d9d mb-3">{service.des}</h5>
                             <div className='grid grid-cols-12 gap-6 mb-6'>
