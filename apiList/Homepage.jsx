@@ -44,4 +44,4 @@ async function getSiteMeta() {
 
 
 
-export { getHeroInfo, getBrandList, getWorkList, getFeaturedProjects, getStats,getSiteMeta }
+export { getHeroInfo, getBrandList, getWorkList, getFeaturedProjects, getStats, getSiteMeta }
