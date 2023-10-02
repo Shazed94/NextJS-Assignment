@@ -38,7 +38,7 @@ export default async function page() {
                             </div>
 
                             <h4 className="text-center text-f16 text-[#9d9d9d] mb-4">
-                              {testomonial.msg}
+                                {testomonial.msg}
                             </h4>
                             <h2 className='text-[26px] font-semibold mb-3'>{testomonial.name}</h2>
                             <p className='text-f16'>{testomonial.designation}</p>
@@ -49,6 +49,6 @@ export default async function page() {
             </section>
             <Subscribe />
             <Footer />
-        </div>
+        </div >
     )
 }
