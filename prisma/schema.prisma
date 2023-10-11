@@ -17,11 +17,11 @@ model user {
   lastName     String   @db.VarChar(50)
   mobile       String   @db.VarChar(15)
   email        String   @db.VarChar(50)
-  passwordHash String   @db.VarChar(32)
-  registeredAt DateTime @default(now()) @db.Timestamp(0)
-  lastLogin    DateTime @default(now()) @updatedAt @db.Timestamp(0)
+  passwordHash String   @db.VarChar(32) 
   intro        String   @db.TinyText
   profile      String   @db.Text
+  registeredAt DateTime @default(now()) @db.Timestamp(0)
+  lastLogin    DateTime @default(now()) @updatedAt @db.Timestamp(0)
   post         post[]
 }
 
