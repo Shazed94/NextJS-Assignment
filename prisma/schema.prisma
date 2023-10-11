@@ -22,7 +22,7 @@ model user {
   profile      String   @db.Text
   registeredAt DateTime @default(now()) @db.Timestamp(0)
   lastLogin    DateTime @default(now()) @updatedAt @db.Timestamp(0)
-  post         post[]
+  // post         post[]
 }
 
 model post {
@@ -38,12 +38,12 @@ model post {
   created_at   DateTime @default(now()) @db.Timestamp(0)
   updated_at   DateTime @default(now()) @updatedAt @db.Timestamp(0)
   published_at DateTime @default(now()) @updatedAt @db.Timestamp(0)
-  user         user     @relation(fields: [authorId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  // user         user     @relation(fields: [authorId], references: [id], onDelete: Restrict, onUpdate: Cascade)
 
-  post_comment  post_comment[]
-  post_meta     post_meta[]
-  post_category post_category[]
-  post_tag      post_tag[]
+  // post_comment  post_comment[]
+  // post_meta     post_meta[]
+  // post_category post_category[]
+  // post_tag      post_tag[]
 }
 
 model post_comment {
@@ -55,7 +55,7 @@ model post_comment {
   content    String   @db.Text
   created_at DateTime @default(now()) @db.Timestamp(0)
   updated_at DateTime @default(now()) @updatedAt @db.Timestamp(0)
-  post       post     @relation(fields: [postId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  // post       post     @relation(fields: [postId], references: [id], onDelete: Restrict, onUpdate: Cascade)
 }
 
 model post_meta {
@@ -66,7 +66,7 @@ model post_meta {
   updated_at DateTime @default(now()) @updatedAt @db.Timestamp(0)
   content    String   @db.Text
 
-  post post @relation(fields: [postId], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  // post post @relation(fields: [postId], references: [id], onDelete: Restrict, onUpdate: Cascade)
 }
 
 model post_category {
@@ -75,8 +75,8 @@ model post_category {
   postId     BigInt @db.UnsignedBigInt
   categoryId BigInt @db.UnsignedBigInt
 
-  post     post     @relation(fields: [postId], references: [id])
-  category category @relation(fields: [categoryId], references: [id])
+  // post     post     @relation(fields: [postId], references: [id])
+  // category category @relation(fields: [categoryId], references: [id])
 }
 
 model category {
@@ -87,7 +87,7 @@ model category {
   slug      String @db.VarChar(100)
   content   String @db.Text
 
-  post_category post_category[]
+  // post_category post_category[]
 }
 
 model post_tag {
@@ -95,8 +95,8 @@ model post_tag {
   postId BigInt @db.UnsignedBigInt
   tagId  BigInt @db.UnsignedBigInt
 
-  post post @relation(fields: [postId], references: [id])
-  tag  tag  @relation(fields: [tagId], references: [id])
+  // post post @relation(fields: [postId], references: [id])
+  // tag  tag  @relation(fields: [tagId], references: [id])
 }
 
 model tag {
@@ -105,5 +105,5 @@ model tag {
   metaTitle String @db.VarChar(100)
   slug      String @db.VarChar(100)
 
-  post_tag post_tag[]
+  // post_tag post_tag[]
 }
