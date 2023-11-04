@@ -12,11 +12,11 @@ const AuthLinks = () => {
         <>
             {status === 'notauuthenticated' ? (
             <>
-                <Link href={'/login'} className='ml-6 sm:text-sm md:text-base lg:text-lg xl:text-2xl'>Login</Link> 
-                <Link href={'/sign-up'} className='ml-6 sm:text-sm md:text-base lg:text-lg xl:text-2xl'>Sign Up</Link>
+                <Link href={'/login'} className='ml-6 sm:text-sm md:text-base lg:text-lg xl:text-xl'>Login</Link> 
+                <Link href={'/sign-up'} className='ml-6 sm:text-sm md:text-base lg:text-lg xl:text-xl'>Sign Up</Link>
             </>) : (
                 <div className='hidden md:block'>
-                    <Link href={'/write'} className='sm:text-sm md:text-base lg:text-lg xl:text-2xl me-6'>Dash</Link>
+                    <Link href={'/write'} className='sm:text-sm md:text-base lg:text-lg xl:text-xl me-6'>Dash</Link>
                     <span className='cursor-pointer me-6'>Logout</span>
                 </div>)}
 

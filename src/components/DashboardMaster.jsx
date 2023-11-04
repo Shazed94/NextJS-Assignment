@@ -7,9 +7,9 @@ export default function DashboardMaster(props) {
         <div className=" flex gap-[30px]">
           <div className="w-[300px] min-h-screen">
             <div className="px-4 py-5 border-r border-gray-300 min-h-full">
-              <div className="logo">
-                <img src="/images/logo.svg" alt="" />
-              </div>
+              <Link href="/" className="logo cursor-pointer">
+               <h3 className="text-xl font-semibold">Shazed's Blog</h3> 
+              </Link>
               <br />
               <br />
               <nav>
@@ -20,7 +20,7 @@ export default function DashboardMaster(props) {
                     </Link>
                   </li>
                   <li>
-                    <Link className="flex items-center gap-4 text-gray-700" href="/dashboard/service">
+                    <Link className="flex items-center gap-4 text-gray-700" href="/dashboard/service/all-services">
                       <FaMendeley /> Service
                     </Link>
                   </li>

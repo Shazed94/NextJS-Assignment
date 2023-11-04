@@ -23,7 +23,7 @@ export default function Home() {
       <DashboardMaster>
         <div className="flex gap-[30px]">
           <div>
-            <section className="antialiased text-gray-600 h-screen px-4">
+            <section className="antialiased  text-gray-600 h-screen px-4">
               <div className="flex flex-col justify-center h-full">
                 {/* Table */}
                 <div className="w-full max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
@@ -81,7 +81,7 @@ export default function Home() {
             </section>
           </div>
           <div>
-            <section className="antialiased text-gray-600 h-screen px-4">
+            <section className="antialiased  text-gray-600 h-screen px-4">
               <div className="flex flex-col justify-center h-full">
                 {/* Table */}
                 <div className="w-full max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
@@ -112,12 +112,7 @@ export default function Home() {
                               Service Image
                             </th>
 
-                            <th
-                              scope="col"
-                              className="px-6 py-4 font-medium text-gray-900"
-                            >
-                              Action
-                            </th>
+                            
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-gray-100 border-t border-gray-100">
